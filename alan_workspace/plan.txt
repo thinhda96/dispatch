@@ -1,0 +1,23 @@
+
+To implement the HTTP service for the `TeamContact` resource, we need to create the required files and define the necessary classes and methods. 
+
+The task requires creating the following files:
+
+1. `models.py`: This file will contain the SQLAlchemy model for `TeamContact`. The model will have the fields `id`, `name`, `email`, `notes`, `incidents`, and `search_vector`.
+
+2. `service.py`: This file will contain the `TeamContactService` class that implements the CRUD operations on the `TeamContact` model.
+
+3. `views.py`: This file will define the FastAPI routes for the `TeamContact` resource. It will use the methods defined in the `TeamContactService` class to interact with the database.
+
+4. `test_views.py`: This file will contain the unit tests for the `TeamContact` resource.
+
+The task also provides an example of an HTTP resource called `moods` which includes the router, view controller, model, and domain service code. We can use this as a reference to create the `TeamContact` resource.
+
+Plan:
+1) Create a new file `src/dispatch/team/models.py` and define the SQLAlchemy model for `TeamContact`. 
+2) Create a new file `src/dispatch/team/service.py` and define the `TeamContactService` class with methods for list, create, update, and delete operations.
+3) Create a new file `src/dispatch/team/views.py` and define the FastAPI routes for the `TeamContact` resource.
+4) Create a new file `tests/dispatch/team/test_views.py` and write unit tests for the `TeamContact` resource.
+5) Run the unit tests to ensure that the `TeamContact` resource is working correctly.
+
+File Changes: ["src/dispatch/team/models.py","src/dispatch/team/service.py","src/dispatch/team/views.py","tests/dispatch/team/test_views.py"]
