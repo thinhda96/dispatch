@@ -1,0 +1,20 @@
+
+Plan:
+
+1) Create a new folder `team` under `src/dispatch`.
+
+2) Within the `team` folder, create a new file `models.py`. In this file, define a new SQLAlchemy model `TeamContact`. The model should have the following fields:
+   - `id`: Integer, primary key
+   - `name`: String
+   - `email`: String
+   - `notes`: String
+   - `incidents`: Relationship with the `Incident` model (Assuming the `Incident` model already exists in the codebase)
+   - `search_vector`: sqlalchemy_utils.TSVectorType
+
+3) Within the `team` folder, create a new file `service.py`. In this file, define a new class `TeamContactService` with static methods for list, create, update, and delete operations. Each method should take a database session as an argument. The methods should use the SQLAlchemy ORM to interact with the `TeamContact` model.
+
+4) Within the `team` folder, create a new file `views.py`. In this file, define a new FastAPI router with routes for each operation in the `TeamContactService`. Each route should use dependency injection to get the database session and use it to call the appropriate `TeamContactService` method.
+
+5) Create a new file `test_views.py` under `tests/dispatch/team`. In this file, write unit tests for each operation in the `TeamContactService`. Each test should create a test database session, use it to set up necessary test data, call the operation being tested, and assert that the operation behaves as expected.
+
+File Changes: ["src/dispatch/team/models.py","src/dispatch/team/service.py","src/dispatch/team/views.py","tests/dispatch/team/test_views.py"]
