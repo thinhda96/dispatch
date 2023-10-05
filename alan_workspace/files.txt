@@ -12,9 +12,9 @@ You can comment:
 
 This is files list, please verify these files carefully:
 ```
+src/dispatch/plugins/dispatch_slack/incident/interactive.py
 src/dispatch/api.py
 src/dispatch/team/service.py
-src/dispatch/plugins/dispatch_slack/incident/interactive.py
 src/dispatch/team/views.py
 src/dispatch/case/views.py
 src/dispatch/team/models.py
