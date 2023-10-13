@@ -1,0 +1,11 @@
+
+Plan:
+1) Create a new file `src/dispatch/team/models.py` and define the `TeamContact` model. This model should be a SQLAlchemy model object and include fields like id, name, email, notes, incidents, and search vector.
+2) Create a new file `src/dispatch/team/service.py` and define the `TeamContactService` class. This class should include methods for creating, updating, deleting, and listing team contacts. Use the provided DAO objects for these operations.
+3) Create a new file `src/dispatch/team/views.py` and define the endpoints for the `TeamContact` router. These endpoints should map to the methods in the `TeamContactService` class and allow for CRUD operations on the `TeamContact` resource.
+4) Create a new file `tests/dispatch/team/test_views.py` and write tests for each endpoint in the `TeamContact` router. These tests should cover all possible inputs and outputs, as well as any error conditions.
+5) Update the `src/dispatch/team/__init__.py` file to import the `TeamContact` model, `TeamContactService` class, and `TeamContact` router.
+6) Update the `src/dispatch/dispatch.py` file to include the `TeamContact` router in the FastAPI application.
+7) Run the tests and verify that all endpoints are working as expected.
+
+File Changes: ["src/dispatch/team/models.py","src/dispatch/team/service.py","src/dispatch/team/views.py","tests/dispatch/team/test_views.py","src/dispatch/team/__init__.py","src/dispatch/dispatch.py"]
